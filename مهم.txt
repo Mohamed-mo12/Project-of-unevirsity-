@@ -1,0 +1,146 @@
+import 'package:flutter/material.dart';
+
+class orderDetail extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          title: Text('Order Details',style: TextStyle(color: Colors.black),),
+          leading: Icon(Icons.arrow_back_ios,color: Colors.black,),
+          elevation: 0,
+
+        ),
+          body: Column(
+
+            children: [
+              Divider(
+                color: Colors.black12,
+                height: 20.0,
+                thickness: 4.0,
+
+              ),
+              Container(
+                width: double.infinity,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 10.0
+                  ),
+                  child: Text('Order 1 details',style: TextStyle(color: Colors.black87,fontSize: 25.0),textAlign: TextAlign.start)),
+                  SizedBox(
+                    width: 5.0,
+                    height: 15.0,
+                  ),
+                Row(
+                  children: [
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 8.0,
+                            ),
+                              child: Text('5-Nov-2022, 3.00 PM',style: TextStyle(color: Colors.black87),textAlign: TextAlign.start)),
+                            SizedBox(
+                              width: 260.0,
+                                child: Text('EGP200.00',style: TextStyle(color: Colors.black87),textAlign: TextAlign.end,))
+
+                  ],
+                ),
+
+                 Row(
+                   children: [
+                     SizedBox(
+                       width: 380.0,
+                         child: Padding(
+                           padding: const EdgeInsets.symmetric(
+                             vertical: 9.0,
+                           ),
+                           child: Text('Cash',style: TextStyle(color: Colors.black87),textAlign: TextAlign.end,),
+                         )),
+
+                   ],
+
+                 ),
+                     SizedBox(
+                       height: 50.0,
+                     ),
+                     Row(
+                       children: [
+                         Container(
+                             padding: EdgeInsets.symmetric(
+                               horizontal: 11.0
+                             ),
+                             child: Icon(Icons.circle,color: Colors.black,size: 10.0,)),
+                         SizedBox(
+                           width: 10.0,
+                         ),
+                         Text('6th of October,Giza governorate',style: TextStyle(color: Colors.black87),),
+
+
+                       ],
+                     ),
+                        SizedBox(
+                          height: 1.0,
+                        ),
+                       Row(
+                         children: [
+                           Container(
+                               padding: EdgeInsets.symmetric(
+                                 horizontal: 45.0
+                               ),
+                               child: Text('30226010,Egypt',style: TextStyle(color: Colors.black87,fontSize: 14.0),))
+                         ],
+                       ),
+                          SizedBox(
+                            height: 70.0,
+                          ),
+                           Row(
+                             children: [
+                               Container(
+                                   width: 300.0,
+                                   child: Text('You Rated Ahmed',style: TextStyle(color: Colors.black87,fontSize: 20.0),textAlign: TextAlign.end,)),
+                               Icon(Icons.star,color: Colors.orangeAccent,size: 20.0,),
+                               Icon(Icons.star,color: Colors.orangeAccent,size: 20.0,),
+                               Icon(Icons.star,color: Colors.orangeAccent,size: 20.0,),
+                               Icon(Icons.star,color: Colors.orangeAccent,size: 20.0,),
+                               Icon(Icons.star_border_purple500_rounded,color: Colors.black,size: 20.0,),
+
+
+
+
+
+
+                          ],
+                           ),
+                Divider(
+                  height: 13.0,
+                  thickness: 3.0,
+                ),
+                     Center(
+
+                       child: Container(
+                         padding: EdgeInsets.symmetric(
+                           vertical: 20.0
+                         ),
+                           child: Text('You order with Ahmed',style: TextStyle(fontSize: 25.0),)),
+                     ) ,
+                     Divider(
+                       height: 30.0,
+                       thickness: 3.0,
+                     ),
+                     
+
+                        ]
+    )
+    );
+
+
+
+
+
+
+
+
+
+
+  }
+}
+
+
