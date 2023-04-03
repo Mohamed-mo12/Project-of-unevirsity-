@@ -10,38 +10,40 @@ class home4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(17.0),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 22.0,vertical:17 ,),
-                    child: Text(
-                      'Messages',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 23,
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(17.0),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 22.0,vertical:17 ,),
+                      child: Text(
+                        'Messages',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 23,
+                      ),
+                      ),
                     ),
-                    ),
-                  ),
-                ],
-              ),
-              Container(
-                height: 550,
-                child: ListView.separated(
-                  scrollDirection: Axis.vertical,
-                  itemBuilder: (context, index){
-                    return buildChatItem(context);
-                  },
-                  separatorBuilder: (context, index){
-                    return SizedBox(height: 24,);
-                  },
-                  itemCount: 10,
+                  ],
                 ),
-              ),
-            ],
+                Container(
+                  height: 550,
+                  child: ListView.separated(
+                    scrollDirection: Axis.vertical,
+                    itemBuilder: (context, index){
+                      return buildChatItem(context);
+                    },
+                    separatorBuilder: (context, index){
+                      return SizedBox(height: 24,);
+                    },
+                    itemCount: 10,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

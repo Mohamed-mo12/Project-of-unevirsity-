@@ -1,6 +1,7 @@
 import 'package:custom_signin_buttons/button_data.dart';
 import 'package:custom_signin_buttons/button_list.dart';
 import 'package:flutter/material.dart';
+import 'package:project/home0.dart';
 import 'package:project/password1.dart';
 import 'package:project/registerUser.dart';
 
@@ -204,6 +205,7 @@ class _loginState extends State<login> {
                                 print(emailController.text);
                                 print(passwordController.text);
                               }
+
                             },
                             child: Text(
                               'LOGIN',
@@ -315,6 +317,7 @@ class _loginState extends State<login> {
 
                                   ),
                                 );
+
                               },
                               child: Text(
                                   'Sign up',

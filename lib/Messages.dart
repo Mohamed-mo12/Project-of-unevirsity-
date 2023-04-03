@@ -322,61 +322,53 @@ class Messages extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 30,),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Container(
-                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),
-                        color: Colors.black,
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(3.0),
-                          child: Icon(Icons.mic,color: Colors.white,),
-                        )),
-                  ),
-                   SizedBox(
-                     width: 200,
-                       child:
-                   Container(
-                     height: 40,
-                     child: TextField(
-                       cursorColor: Colors.black,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Row(
+                  children: [
+                     SizedBox(
+                       width: 270,
+                         child:
+                     Container(
+                       height: 40,
+                       child: TextField(
+                         cursorColor: Colors.black,
 
-                       decoration: InputDecoration(
-                         border: OutlineInputBorder(
-                           borderSide: BorderSide(
-                             color: Color.fromRGBO(217, 217, 217, 1),
+                         decoration: InputDecoration(
+                           border: OutlineInputBorder(
+                             borderSide: BorderSide(
+                               color: Color.fromRGBO(217, 217, 217, 1),
+
+                             ),
+                           ),
+                           enabledBorder: OutlineInputBorder(
+                             borderRadius: BorderRadius.circular(15.0,),
 
                            ),
-                         ),
-                         enabledBorder: OutlineInputBorder(
-                           borderRadius: BorderRadius.circular(15.0,),
-
-                         ),
-                         focusedBorder: OutlineInputBorder(
-                           borderSide: BorderSide(
-                             color: Color.fromRGBO(217, 217, 217, 1),
+                           focusedBorder: OutlineInputBorder(
+                             borderSide: BorderSide(
+                               color: Color.fromRGBO(217, 217, 217, 1),
+                             ),
+                             borderRadius: BorderRadius.circular(15.0,),
                            ),
-                           borderRadius: BorderRadius.circular(15.0,),
                          ),
                        ),
                      ),
-                   ),
 
-                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Container(
-                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),
-                          color: Colors.black,
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(3.0),
-                          child: Icon(Icons.arrow_forward,color: Colors.white,),
-                        )),
-                  ),
-                ],
+                     ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      child: Container(
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),
+                            color: Colors.black,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(3.0),
+                            child: Icon(Icons.arrow_forward,color: Colors.white,),
+                          )),
+                    ),
+                  ],
+                ),
               ),
 
             ],

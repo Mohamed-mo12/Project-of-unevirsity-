@@ -1,5 +1,9 @@
 
 import 'package:flutter/material.dart';
+import 'package:project/home2.dart';
+import 'package:project/home3.dart';
+import 'package:project/home4.dart';
+import 'package:rate/rate.dart';
 class home1 extends StatefulWidget {
   const home1({Key? key}) : super(key: key);
 
@@ -8,7 +12,6 @@ class home1 extends StatefulWidget {
 }
 
 class _home1State extends State<home1> {
-
 bool electrical  = true;
   @override
   Widget build(BuildContext context) {
@@ -41,52 +44,20 @@ bool electrical  = true;
                           color: Color.fromRGBO(18, 34, 55, 1),
                         ),
                       ),
-                      SizedBox(width: 30,),
+                      SizedBox(width: 80,),
                       IconButton(
-                        icon: Icon(
-                          Icons.notifications,
-                          size: 25,
-                        ),
-                        onPressed: (){},
-                      ),
-                      IconButton(
-                        icon: Icon(
-                          Icons.location_on,
-                          size: 25,
-                        ),
-                        onPressed: (){},
+                          onPressed: (){},
+                          icon: Icon(Icons.location_on),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(height: 20,),
-                TextFormField(
-                  cursorColor: Colors.black,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color.fromRGBO(217, 217, 217, 1),
-
-                      ),
+                Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/background.png'),
                     ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15.0,),
-
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color.fromRGBO(217, 217, 217, 1),
-                      ),
-                      borderRadius: BorderRadius.circular(15.0,),
-                    ),
-
-                    suffixIcon: Icon(
-                      Icons.search,
-                      color: Color.fromRGBO(217, 217, 217, 1),
-                    ),
-
                   ),
-
                 ),
                 SizedBox(height: 20,),
                 Container(
@@ -171,9 +142,6 @@ bool electrical  = true;
                             child: IconButton(
                                 onPressed: ()
                                   {
-                                    setState(() {
-                                      electrical  = true;
-                                    });
                                   },
                                 icon: Icon(Icons.electrical_services,),
                               color: Color.fromRGBO(63, 191, 120, 1),
@@ -188,9 +156,7 @@ bool electrical  = true;
                           ),
                           child: IconButton(
                               onPressed: () {
-                                setState(() {
-                                  electrical = false;
-                                });
+
                               },
                               icon: Icon(Icons.carpenter,),
                             color: Color.fromRGBO(63, 191, 120, 1),
@@ -223,14 +189,103 @@ bool electrical  = true;
                     ],
                   ),
                 ),
-
+                SizedBox(height: 20,),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                  child: Row(
+                    children: [
+                      Text('Recommended',
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w700,
+                      ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 24,),
+                Container(
+                  height: 300,
+                  width: 400,
+                  child: ListView.separated(
+                    //scrollDirection: Axis.horizontal,
+                    itemBuilder: (context,index){
+                    return buildTechItem();
+                  },
+                      separatorBuilder: (context, index){
+                        return SizedBox(height: 25,);
+                      },
+                      itemCount: 3,
+                  ),
+                ),
               ],
             ),
           ),
         ),
       ),
+
     );
   }
+Widget buildTechItem(){
+    return  Row(
+      children: [
+        Image(image:AssetImage(
+          'assets/images/man.png',
+        ) ,
+          height: 40,
+          width: 40,
+        ),
+        Column(
+          children: [
+            Text('Ahmed Mohamed',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w600,
+              ),
 
+            ),
+            SizedBox(height: 5,),
+            Rate(
+              iconSize: 20,
+              color: Color.fromRGBO(255, 190, 30, 1),
+              allowClear: true,
+              allowHalf: true,
+              initialValue: 4,
+              readOnly: true,
+              onChange: (value) => print(value),
+            ),
+          ],
+        ),
+        SizedBox(width: 15,),
+        Image(image:AssetImage(
+          'assets/images/man.png',
+        ) ,
+          height: 40,
+          width: 40,
+        ),
+        Column(
+          children: [
+            Text('Ahmed Mohamed',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w600,
+              ),
+
+            ),
+            SizedBox(height: 5,),
+            Rate(
+              iconSize: 20,
+              color: Color.fromRGBO(255, 190, 30, 1),
+              allowClear: true,
+              allowHalf: true,
+              initialValue: 4,
+              readOnly: true,
+              onChange: (value) => print(value),
+            ),
+          ],
+        ),
+      ],
+    );
+}
 
 }

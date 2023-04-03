@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:project/ContactUs.dart';
+import 'package:project/ordersList.dart';
 import 'package:project/settings.dart';
-
 import 'package:flutter_switch/flutter_switch.dart';
-
 class sitModel {
   final String pageName;
   final IconData icon;
   void Function()? onTap;
-
   sitModel({
     required this.pageName,
     required this.icon,
     required this.onTap,
   });
 }
-
 class home3 extends StatefulWidget {
   _home3State creatState() => _home3State();
   home3({Key? key}) : super(key: key);
@@ -28,11 +26,6 @@ class _home3State extends State<home3> {
   @override
   Widget build(BuildContext context) {
     List<sitModel> model = [
-     // sitModel(
-       //   pageName: 'Notifications',
-         // icon: Icons.notifications,
-          //onTap: () {
-          //}),
       sitModel(
           pageName: 'Your Profile',
           icon: Icons.account_circle,
@@ -44,18 +37,15 @@ class _home3State extends State<home3> {
           pageName: 'Orders List',
           icon: Icons.shopping_cart_rounded,
           onTap: () {
-          }),
-      sitModel(
-          pageName: 'Terms and Conditions',
-          icon: Icons.error,
-          onTap: () {
-
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => ordersList()));
           }),
       sitModel(
           pageName: 'Contact us',
           icon: Icons.chat,
           onTap: () {
-
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => ContactUs()));
           }),
       sitModel(
           pageName: 'Log Out',
